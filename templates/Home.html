@@ -14,22 +14,33 @@
     </style>
   </head>
    <body>
+        {% include 'nav.html' %}
+     <img id="banner" src="https://moses-career-website.mosesgawang.repl.co/static/banner.jpg" class="img.fluid" height="320">
     <div class="container"> 
     <h1 class="text-center mt-2 mb-4 display-3">Moses Career</h1>
-    <img id="banner" src="https://moses-career-website.mosesgawang.repl.co/static/banner.jpg" class="img.fluid" height="320">
-        <h1 class="text-center mt-2 mb-4">About Moses Career</h1>
-    <p class="lead"> Moses Career App is a cutting-edge and innovative platform that has revolutionized the way individuals navigate their professional journeys. Designed to cater to job seekers, career changers, and even seasoned professionals, this app offers a comprehensive suite of tools and features to maximize one's career potential. The app boasts a user-friendly interface that simplifies the job search process by aggregating job listings from various industries and locations, matching candidates with their ideal roles. </p>
+      <div class="row" style="margin-bottom:16px">  
+        <div class="col-md-7">  
+      <p class="lead"> Moses Career App has quickly become the go-to resource for individuals seeking to enhance their professional growth and opportunities. With its cutting-edge and innovative approach, the app empowers users to navigate their career paths with confidence and ease. Whether you are a recent graduate looking for your first job, a seasoned professional considering a career change, or someone seeking to advance in your current field, this platform caters to all.
+
+One of the key features that set Moses Career App apart is its user-friendly interface. Navigating the app is a breeze, making it accessible to users of all tech-savviness levels. The streamlined design ensures that job seekers can effortlessly explore a wealth of job listings from diverse industries and locations, thereby expanding their horizons beyond local opportunities</p>
+      </div>
+         <div class="d-none d-md-block col-md-5">
+           <img src="/static/work.jpg" style="height:320px;border-radius:8px;">
+         </div>
+         </div>
     <h3 class="text-center mt-2 mb-4 h4">OPEN POSITIONS</h3>
     <p>{% for job in jobs %}
       {% include 'job_item.html'%}
       {% endfor %}
     </p>
     <div class="text-center"> 
-    <button class="btn btn-primary">Contact Us</button>
+   <a href="mailto:hrmo@mosescareer.com?subject=Questions%20About%20Job%20Openings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%3A%20%3Center%20questions%20here%3E%0D%0A%0D%0A" 
+        type="Apply" class="btn btn-outline-primary">Contact Us</a>
       <p class= "mt-4">
         Copyright 2023, Moses
       </p>  
     </div>
     </div>
+     {% include 'footer.html' %}
   </body>
 </html>
